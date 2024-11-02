@@ -1,17 +1,13 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "HistorialEntrada";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Estilos{
-
+@section Estilos {
     <!-- ============================================================
-       =ESTILOS PARA ESTA PAGINA
+       =ESTILOS PARA ESTA PÁGINA
        ===============================================================-->
     <link href="~/vendor/jquery-ui/jquery-ui.css" rel="stylesheet">
-
-
 }
 
 <div class="card shadow mb-4">
@@ -24,7 +20,7 @@
                 <label for="cboBuscarPor">Buscar por</label>
                 <select class="form-control form-control-sm" id="cboBuscarPor">
                     <option value="fecha">Fechas</option>
-                    <option value="numero">Numero Entrada</option>
+                    <option value="numero">Número Entrada</option>
                 </select>
             </div>
             <div class="form-group col-sm-3 busqueda-fecha">
@@ -36,7 +32,7 @@
                 <input type="text" class="form-control form-control-sm" id="txtFechaFin">
             </div>
             <div class="form-group col-sm-3 busqueda-venta">
-                <label for="txtNumeroVenta">Numero Entrada</label>
+                <label for="txtNumeroVenta">Número Entrada</label>
                 <input type="text" class="form-control form-control-sm" id="txtNumeroVenta">
             </div>
             <div class="form-group col-sm-3">
@@ -51,21 +47,19 @@
                     <thead>
                         <tr>
                             <th>Fecha Registro</th>
-                            <th>Numero Entrada</th>
+                            <th>Número Entrada</th>
                             @* <th>Tipo Documento</th>
                             <th>Documento Cliente</th> *@
-                           @*  <th>Fecha Caducidad</th>  *@
+                            @*  <th>Fecha Caducidad</th>  *@
                             <th>Proveedor</th>
                             @* <th>Total</th> *@
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                       
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 </div>
@@ -90,7 +84,7 @@
                                     <input type="text" class="form-control form-control-sm" id="txtFechaRegistro" disabled>
                                 </div>
                                 <div class="form-group col-sm-4">
-                                    <label for="txtNumVenta">Numero Entrada</label>
+                                    <label for="txtNumVenta">Número Entrada</label>
                                     <input type="text" class="form-control form-control-sm" id="txtNumVenta" disabled>
                                 </div>
                                 <div class="form-group col-sm-4">
@@ -99,32 +93,32 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                               @*  <div class="form-group col-sm-4">
-                                    <label for="txtTipoDocumento">Tipo Documento</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtTipoDocumento" disabled>
+                                @*  <div class="form-group col-sm-4">
+                                <label for="txtTipoDocumento">Tipo Documento</label>
+                                <input type="text" class="form-control form-control-sm" id="txtTipoDocumento" disabled>
                                 </div> *@
-                               @*  <div class="form-group col-sm-4">
-                                    <label for="txtFechaCaducidad">Fecha Caducidad</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtFechaCaducidad" disabled>
+                                @*  <div class="form-group col-sm-4">
+                                <label for="txtFechaCaducidad">Fecha Caducidad</label>
+                                <input type="text" class="form-control form-control-sm" id="txtFechaCaducidad" disabled>
                                 </div> *@
                                 <div class="form-group col-sm-4">
                                     <label for="txtNombreCliente">Proveedor</label>
                                     <input type="text" class="form-control form-control-sm" id="txtNombreCliente" disabled>
                                 </div>
                             </div>
-                          @*   <div class="form-row">
-                                <div class="form-group col-sm-4">
-                                    <label for="txtSubTotal">Sub Total</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtSubTotal" disabled>
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="txtIGV">IGV</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtIGV" disabled>
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="txtTotal">Total</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtTotal" disabled>
-                                </div>
+                            @*   <div class="form-row">
+                            <div class="form-group col-sm-4">
+                            <label for="txtSubTotal">Sub Total</label>
+                            <input type="text" class="form-control form-control-sm" id="txtSubTotal" disabled>
+                            </div>
+                            <div class="form-group col-sm-4">
+                            <label for="txtIGV">IGV</label>
+                            <input type="text" class="form-control form-control-sm" id="txtIGV" disabled>
+                            </div>
+                            <div class="form-group col-sm-4">
+                            <label for="txtTotal">Total</label>
+                            <input type="text" class="form-control form-control-sm" id="txtTotal" disabled>
+                            </div>
                             </div> *@
                             <div class="row">
                                 <div class="col-sm-12">
@@ -154,15 +148,11 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <!-- ============================================================
-       =SCRIPTS PARA ESTA PAGINA
+       =SCRIPTS PARA ESTA PÁGINA
        ===============================================================-->
-
-
     <script src="~/vendor/jquery-ui/jquery-ui.js"></script>
     <script src="~/vendor/jquery-ui/idioma/datepicker-es.js"></script>
-
     <script src="~/js/vistas/Historial_Entrada7.js"></script>
-
 }

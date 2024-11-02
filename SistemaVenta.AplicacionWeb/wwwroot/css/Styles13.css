@@ -546,6 +546,14 @@ pre {
     margin-left: auto;
 }
 
+.container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+
 @media (min-width: 576px) {
     .container, .container-sm {
         max-width: 540px;
@@ -11791,13 +11799,13 @@ form.user .custom-checkbox.small label {
 
 form.user .form-control-user {
     font-size: 0.8rem;
-    border-radius: 10rem;
+    border-radius: 0.35rem;
     padding: 1.5rem 1rem;
 }
 
 form.user .btn-user {
     font-size: 0.8rem;
-    border-radius: 10rem;
+    border-radius: 0.35rem;
     padding: 0.75rem 1rem;
 }
 

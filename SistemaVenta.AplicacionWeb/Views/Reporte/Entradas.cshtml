@@ -1,10 +1,9 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Reporte Entradas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Estilos{
+@section Estilos {
     <!-- ============================================================
     =ESTILOS PARA ESTA PAGINA
     ===============================================================-->
@@ -19,7 +18,6 @@
     </div>
     <div class="card-body">
         <div class="form-row align-items-end">
-
             <div class="form-group col-sm-3">
                 <label for="txtFechaInicio">Fecha Inicio</label>
                 <input type="text" class="form-control form-control-sm" id="txtFechaInicio">
@@ -40,18 +38,10 @@
                     <thead>
                         <tr>
                             <th scope="col">Fecha Registro</th>
-                            <th scope="col">Numero Entrada</th>
-                            @* <th scope="col">Tipo Documento</th> *@
-                            @* <th scope="col">Documento Cliente</th> *@
-                 @*            <th scope="col">Fecha Caducidad</th> *@
+                            <th scope="col">Número de Entrada</th>
                             <th scope="col">Proveedor</th>
-                       @*      <th scope="col">Sub Total Venta</th>
-                            <th scope="col">Impuesto Total Venta</th> *@
-                @*             <th scope="col">Total Venta</th> *@
                             <th scope="col">Producto</th>
                             <th scope="col">Cantidad</th>
-                       @*      <th scope="col">Precio</th>
-                            <th scope="col">Total</th> *@
                         </tr>
                     </thead>
                     <tbody>
@@ -62,26 +52,22 @@
     </div>
 </div>
 
-
-@section Scripts{
+@section Scripts {
     <!-- ============================================================
     =SCRIPTS PARA ESTA PAGINA
     ===============================================================-->
     <script src="~/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="~/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-                  
+
     <script src="~/vendor/datatables/extensiones/js/dataTables.responsive.min.js"></script>
-                  
+
     <script src="~/vendor/datatables/extensiones/js/dataTables.buttons.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/jszip.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/buttons.html5.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/buttons.print.min.js"></script>
-                  
+
     <script src="~/vendor/jquery-ui/jquery-ui.js"></script>
     <script src="~/vendor/jquery-ui/idioma/datepicker-es.js"></script>
 
     <script src="~/js/vistas/Entradas_Index4.js"></script>
-
 }
-
-

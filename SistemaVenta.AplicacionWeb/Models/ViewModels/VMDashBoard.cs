@@ -7,7 +7,6 @@
 
         public string? TotalIngresos { get; set; }
 
-
         public int TotalProductos { get; set; }
 
         public int TotalCategorias { get; set; }

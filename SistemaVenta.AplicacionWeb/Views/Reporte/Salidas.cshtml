@@ -1,10 +1,9 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Reporte Salidas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Estilos{
+@section Estilos {
     <!-- ============================================================
     =ESTILOS PARA ESTA PAGINA
     ===============================================================-->
@@ -19,7 +18,6 @@
     </div>
     <div class="card-body">
         <div class="form-row align-items-end">
-
             <div class="form-group col-sm-3">
                 <label for="txtFechaInicio">Fecha Inicio</label>
                 <input type="text" class="form-control form-control-sm" id="txtFechaInicio">
@@ -33,24 +31,18 @@
             </div>
         </div>
 
-        <hr/>
+        <hr />
         <div class="row">
             <div class="col-sm-12">
                 <table id="tbdata" class="table table-sm table-striped" cellspacing="0" style="width:100%">
                     <thead>
                         <tr>
                             <th scope="col">Fecha Registro</th>
-                            <th scope="col">Numero Salida</th>
-                            @* <th scope="col">Tipo Documento</th> *@
+                            <th scope="col">Número de Salida</th>
                             <th scope="col">Documento Cliente</th>
                             <th scope="col">Nombre Cliente</th>
-                            <@* th scope="col">Sub Total Venta</th>
-                            <th scope="col">Impuesto Total Venta</th>
-                            <th scope="col">Total Venta</th> *@
                             <th scope="col">Producto</th>
                             <th scope="col">Cantidad</th>
-                          @*   <th scope="col">Precio</th>
-                            <th scope="col">Total</th> *@
                         </tr>
                     </thead>
                     <tbody>
@@ -61,26 +53,22 @@
     </div>
 </div>
 
-
-@section Scripts{
+@section Scripts {
     <!-- ============================================================
     =SCRIPTS PARA ESTA PAGINA
     ===============================================================-->
     <script src="~/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="~/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-                  
+
     <script src="~/vendor/datatables/extensiones/js/dataTables.responsive.min.js"></script>
-                  
+
     <script src="~/vendor/datatables/extensiones/js/dataTables.buttons.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/jszip.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/buttons.html5.min.js"></script>
     <script src="~/vendor/datatables/extensiones/js/buttons.print.min.js"></script>
-                  
+
     <script src="~/vendor/jquery-ui/jquery-ui.js"></script>
     <script src="~/vendor/jquery-ui/idioma/datepicker-es.js"></script>
 
     <script src="~/js/vistas/Salidas_Index3.js"></script>
-
 }
-
-

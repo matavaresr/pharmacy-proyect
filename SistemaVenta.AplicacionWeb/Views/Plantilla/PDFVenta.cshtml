@@ -1,16 +1,14 @@
 ﻿@model SistemaVenta.AplicacionWeb.Models.ViewModels.VMPDFVenta;
 @{
- Layout = null; 
-
+    Layout = null;
 }
-
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>ImprimirVenta</title>
+    <title>Imprimir Venta</title>
     <style>
         .contenedor {
             width: 900px !important;
@@ -114,7 +112,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="text">Direccion: @Model.negocio.Direccion</p></td>
+                            <td><p class="text">Dirección: @Model.negocio.Direccion</p></td>
                         </tr>
                         <tr>
                             <td>
@@ -160,7 +158,6 @@
                             <td class="td-item"><p class="item">@Model.negocio.SimboloMoneda @item.Precio</p></td>
                             <td style="background-color:#EDF6F9"><p class="item">@Model.negocio.SimboloMoneda @item.Total</p></td>
                         </tr>
-
                     }
                 }
                 <tr>
@@ -196,6 +193,3 @@
 
 </body>
 </html>
-
-
-

@@ -8,6 +8,10 @@
 **/bin/
 **/obj/
 
+# Ignorar archivos de configuración de la aplicación en cualquier ubicación
+**/appsettings.json
+**/appsettings.*.json
+
 # Ignorar archivos específicos del usuario en cualquier ubicación
 **/*.rsuser
 **/*.userosscache

@@ -1,8 +1,8 @@
 ﻿@model SistemaVenta.AplicacionWeb.Models.ViewModels.VMUsuarioLogin;
 @{
     Layout = null;
-
 }
+
 <!DOCTYPE html>
 <html lang="ES">
 
@@ -22,7 +22,6 @@
 
     <!-- Custom styles for this template-->
     <link href="~/css/Styles13.css" rel="stylesheet">
-
 </head>
 
 <body class="bg-gradient-info">
@@ -60,17 +59,16 @@
 
                                         @if (ViewData["Mensaje"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-danger" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-danger" role="alert">
                                                     @ViewData["Mensaje"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
-                                         
 
-                                     <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Ingresar
-                                        </button> 
+                                        </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -88,7 +86,7 @@
 
     </div>
 
-
 </body>
 
 </html>
+    

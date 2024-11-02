@@ -1,15 +1,12 @@
 ﻿@model SistemaVenta.AplicacionWeb.Models.ViewModels.VMUsuarioLogin;
 @{
-
-    Layout = null; 
+    Layout = null;
 }
-
 
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +21,6 @@
 
     <!-- Custom styles for this template-->
     <link href="~/css/Styles13.css" rel="stylesheet">
-
 </head>
 
 <body class="bg-gradient-info">
@@ -49,28 +45,28 @@
                                     </div>
                                     <form class="user" asp-controller="Acceso" asp-action="RestablecerClave" method="post">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" asp-for="Correo"  placeholder="Ingrese su correo">
+                                            <input type="email" class="form-control form-control-user" asp-for="Correo" placeholder="Ingrese su correo">
                                         </div>
-                                
+
                                         @if (ViewData["Mensaje"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-success" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-success" role="alert">
                                                     @ViewData["Mensaje"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
                                         @if (ViewData["MensajeError"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-danger" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-danger" role="alert">
                                                     @ViewData["MensajeError"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
-                                        
+
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Reestablecer Contraseña
+                                            Restablecer Contraseña
                                         </button>
                                     </form>
                                     <hr>

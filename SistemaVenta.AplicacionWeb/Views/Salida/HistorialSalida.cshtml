@@ -1,17 +1,13 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "HistorialSalida";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section Estilos{
-
+@section Estilos {
     <!-- ============================================================
        =ESTILOS PARA ESTA PAGINA
        ===============================================================-->
     <link href="~/vendor/jquery-ui/jquery-ui.css" rel="stylesheet">
-
-
 }
 
 <div class="card shadow mb-4">
@@ -24,7 +20,7 @@
                 <label for="cboBuscarPor">Buscar por</label>
                 <select class="form-control form-control-sm" id="cboBuscarPor">
                     <option value="fecha">Fechas</option>
-                    <option value="numero">Numero Salida</option>
+                    <option value="numero">Número de Salida</option>
                 </select>
             </div>
             <div class="form-group col-sm-3 busqueda-fecha">
@@ -36,7 +32,7 @@
                 <input type="text" class="form-control form-control-sm" id="txtFechaFin">
             </div>
             <div class="form-group col-sm-3 busqueda-venta">
-                <label for="txtNumeroVenta">Numero Salida</label>
+                <label for="txtNumeroVenta">Número de Salida</label>
                 <input type="text" class="form-control form-control-sm" id="txtNumeroVenta">
             </div>
             <div class="form-group col-sm-3">
@@ -51,20 +47,16 @@
                     <thead>
                         <tr>
                             <th>Fecha Registro</th>
-                            <th>Numero Salida</th>
-                         @*    <th>Tipo Documento</th> *@
+                            <th>Número de Salida</th>
                             <th>Documento Cliente</th>
                             <th>Nombre Cliente</th>
-                          @*   <th>Total</th> *@
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                       
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
 </div>
@@ -89,7 +81,7 @@
                                     <input type="text" class="form-control form-control-sm" id="txtFechaRegistro" disabled>
                                 </div>
                                 <div class="form-group col-sm-4">
-                                    <label for="txtNumVenta">Numero Salida</label>
+                                    <label for="txtNumVenta">Número de Salida</label>
                                     <input type="text" class="form-control form-control-sm" id="txtNumVenta" disabled>
                                 </div>
                                 <div class="form-group col-sm-4">
@@ -98,10 +90,6 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                               @*  <div class="form-group col-sm-4">
-                                    <label for="txtTipoDocumento">Tipo Documento</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtTipoDocumento" disabled>
-                                </div> *@
                                 <div class="form-group col-sm-4">
                                     <label for="txtDocumentoCliente">Documento Cliente</label>
                                     <input type="text" class="form-control form-control-sm" id="txtDocumentoCliente" disabled>
@@ -111,20 +99,6 @@
                                     <input type="text" class="form-control form-control-sm" id="txtNombreCliente" disabled>
                                 </div>
                             </div>
-                            <div class="form-row">
-                               @*  <div class="form-group col-sm-4">
-                                    <label for="txtSubTotal">Sub Total</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtSubTotal" disabled>
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="txtIGV">IGV</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtIGV" disabled>
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="txtTotal">Total</label>
-                                    <input type="text" class="form-control form-control-sm" id="txtTotal" disabled>
-                                </div> *@
-                            </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table id="tbProductos" class="table table-sm table-striped">
@@ -132,8 +106,6 @@
                                             <tr>
                                                 <th>Producto</th>
                                                 <th>Cantidad</th>
-                                             @*    <th>Precio</th>
-                                                <th>Total</th> *@
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -153,15 +125,11 @@
     </div>
 </div>
 
-@section Scripts{
+@section Scripts {
     <!-- ============================================================
        =SCRIPTS PARA ESTA PAGINA
        ===============================================================-->
-
-
     <script src="~/vendor/jquery-ui/jquery-ui.js"></script>
     <script src="~/vendor/jquery-ui/idioma/datepicker-es.js"></script>
-
     <script src="~/js/vistas/Historial_Salida1.js"></script>
-
 }
