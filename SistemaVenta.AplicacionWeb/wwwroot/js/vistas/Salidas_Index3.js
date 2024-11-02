@@ -5,19 +5,14 @@
 
 let tablaData;
 $(document).ready(function () {
-    
     $.datepicker.setDefaults($.datepicker.regional["es"])
-
-
-
     $("#txtFechaInicio").datepicker({ dateFormat: "dd/mm/yy" })
     $("#txtFechaFin").datepicker({ dateFormat: "dd/mm/yy" })
 
-
-
-
     tablaData = $('#tbdata').DataTable({
         responsive: true,
+        "processing": true,
+        "serverSide": true,
         "ajax": {
             "url": '/Salidas/ReporteVenta?fechaInicio=01/01/1991&fechaFin=01/01/1991',
             "type": "GET",
@@ -36,7 +31,7 @@ $(document).ready(function () {
             { "data": "cantidad" },
             //{ "data": "precio" },
             //{ "data": "total" },
-           
+
         ],
         order: [[0, "desc"]],
         dom: "Bfrtip",
@@ -51,12 +46,9 @@ $(document).ready(function () {
         language: {
             url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
         },
+        "deferLoading": 0,
     });
-
-
-
-
-})
+});
 
 
 $("#btnBuscar").click(function () {

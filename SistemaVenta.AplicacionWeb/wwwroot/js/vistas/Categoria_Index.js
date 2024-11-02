@@ -23,7 +23,7 @@ $(document).ready(function () {
             "datatype": "json"
         },
         "columns": [
-            { "data": "IdCategoria", "visible": false, "searchable": false },
+            { "data": "idCategoria", "visible": false, "searchable": false },
             { "data": "descripcion" },
             {
                 "data": "esActivo", render: function (data) {

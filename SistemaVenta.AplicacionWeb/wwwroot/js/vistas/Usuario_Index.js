@@ -42,7 +42,7 @@ $(document).ready(function(){
              "datatype": "json"
          },
         "columns": [
-            { "data": "IdUsuario", "visible": false, "searchable":false},
+            { "data": "idUsuario", "visible": false, "searchable":false},
             {
                 "data": "urlFoto", render: function (data) {
                     return `<img style= "height:60px" src =${data} class="rounded mx-auto d-block"/>`
