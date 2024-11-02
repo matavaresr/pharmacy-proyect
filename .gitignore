@@ -1,0 +1,21 @@
+# Ignorar carpetas de configuración de Visual Studio en cualquier ubicación
+**/.vs/
+**/*.user
+**/*.suo
+**/*.sln.docstates
+
+# Ignorar carpetas de compilación en cualquier ubicación
+**/bin/
+**/obj/
+
+# Ignorar archivos de configuración de la aplicación en cualquier ubicación
+**/appsettings.json
+**/appsettings.*.json
+
+# Ignorar archivos específicos del usuario en cualquier ubicación
+**/*.rsuser
+**/*.userosscache
+**/*.suo
+
+# Ignorar archivos de proyecto y configuraciones adicionales en cualquier ubicación
+**/*.csproj.user
