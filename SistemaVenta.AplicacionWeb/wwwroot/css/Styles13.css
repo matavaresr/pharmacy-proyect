@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --blue: #4e73df;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -347,6 +347,11 @@ template {
     display: none !important;
 }
 
+.login-title{
+    font-weight:600;
+    font-size: 2rem
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0.5rem;
@@ -608,6 +613,11 @@ pre {
     padding-left: 0.75rem;
 }
 
+.bg-login-image {
+    background-image: url(../img/loginimage2.png);
+    background-size: cover;
+  s
+}
 .col {
     flex-basis: 0;
     flex-grow: 1;
@@ -2549,14 +2559,15 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #36b9cc;
-    border-color: #fff;
+    background-color: #20639B;
+    border-color:white
 }
 
     .btn-primary:hover {
-        color: #fff;
-        background-color: #2e59d9;
-        border-color: #2653d4;
+        color: white;
+        background-image: linear-gradient(90deg, black, black);
+        border-color: black;
+        transition: .3s
     }
 
     .btn-primary:focus, .btn-primary.focus {
@@ -2663,14 +2674,15 @@ fieldset:disabled a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: #1cc88a;
-    border-color: #1cc88a;
+    background-color: #3CAEA3;
+    border-color:white
 }
 
     .btn-success:hover {
-        color: #fff;
-        background-color: #17a673;
-        border-color: #169b6b;
+        color: white;
+        background-image: linear-gradient(90deg, black, black);
+        border-color: black;
+        transition:.3s
     }
 
     .btn-success:focus, .btn-success.focus {
@@ -10769,19 +10781,13 @@ a:focus {
     animation-timing-function: opacity cubic-bezier(0, 1, 0.4, 1);
 }
 
-/* .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
-  background-size: cover;
-} */
-
 .bg-gradient-primary {
-    background-color: #36b9cc;
-    background-size: cover;
+    background-image: linear-gradient(180deg, #3CAEA3, #20639B)
 }
 
+
 .bg-second-primary {
-    background-color: #36b9cc !important;
+    background-image: linear-gradient(90deg, #3CAEA3, #20639B)
 }
 
 
@@ -10797,16 +10803,13 @@ a:focus {
     background-size: cover;
 }
 
-.bg-gradient-info {
-    background-color: #36b9cc;
-    background-size: cover;
+.login-image{
+    height:500px
 }
 
-/* .bg-gradient-info {
-  background-color: #36b9cc;
-  background-image: linear-gradient(180deg, #36b9cc 10%, #258391 100%);
-  background-size: cover;
-} */
+.bg-gradient-info {
+    background-image: linear-gradient(90deg, #3CAEA3, #20639B);
+} 
 
 .bg-gradient-warning {
     background-color: #f6c23e;
@@ -11184,15 +11187,16 @@ a:focus {
 }
 
 .topbar.navbar-dark .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.8);
+    color: white
 }
 
     .topbar.navbar-dark .navbar-nav .nav-item .nav-link:hover {
-        color: #fff;
+       color:white;
+       font-weight:bold
     }
 
     .topbar.navbar-dark .navbar-nav .nav-item .nav-link:active {
-        color: #fff;
+        color: white;
     }
 
 .topbar.navbar-light .navbar-nav .nav-item .nav-link {
@@ -11200,7 +11204,8 @@ a:focus {
 }
 
     .topbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
-        color: #b7b9cc;
+        color: white;
+        font-weight: bold
     }
 
     .topbar.navbar-light .navbar-nav .nav-item .nav-link:active {
@@ -11603,19 +11608,24 @@ a:focus {
 }
 
 .sidebar-dark .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255);
 }
 
+
     .sidebar-dark .nav-item .nav-link i {
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255);
     }
 
     .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:hover {
-        color: #fff;
+        color: white;
+        font-size:15px;
+        transition:.3s
     }
 
         .sidebar-dark .nav-item .nav-link:active i, .sidebar-dark .nav-item .nav-link:focus i, .sidebar-dark .nav-item .nav-link:hover i {
-            color: #fff;
+            color: white;
+            font-size:large;
+                transition:.3s
         }
 
     .sidebar-dark .nav-item .nav-link[data-toggle="collapse"]::after {
@@ -11773,13 +11783,6 @@ a:focus {
     }
 }
 
-.bg-login-image {
-    /*background: url("");*/
-    /*background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");*/
-    background: url("../imgFarmacia/Medicalmedical.png");
-    background-position: center;
-    background-size: cover;
-}
 
 .bg-register-image {
     background: url("");
@@ -11804,9 +11807,11 @@ form.user .form-control-user {
 }
 
 form.user .btn-user {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
     border-radius: 0.35rem;
     padding: 0.75rem 1rem;
+    background-image: linear-gradient(140deg, #3CAEA3, #20639B)
 }
 
 .btn-google {
