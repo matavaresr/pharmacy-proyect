@@ -120,7 +120,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
         public IActionResult MostrarPDFVenta(string numeroEntrada)
         {
 
-            string urlPlantillaVista = $"{this.Request.Scheme}://{this.Request.Host}/Plantilla/PDFVenta?numeroVenta={numeroEntrada}";
+            string urlPlantillaVista = $"{this.Request.Scheme}://{this.Request.Host}/Plantilla/PDFEntrada?numeroEntrada={numeroEntrada}";
 
             var pdf = new HtmlToPdfDocument()
             {

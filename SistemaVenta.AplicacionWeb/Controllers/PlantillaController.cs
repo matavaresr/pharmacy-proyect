@@ -11,18 +11,19 @@ namespace SistemaVenta.AplicacionWeb.Controllers
         private readonly IMapper _mapper;
         private readonly INegocioService _negocioServicio;
         private readonly IVentaService _ventaServicio;
+        private readonly IEntradaService _entradaServicio;
 
-        
+
         public PlantillaController(IMapper mapper,
              INegocioService negocioServicio,
-             IVentaService ventaServicio
+             IVentaService ventaServicio,
+             IEntradaService entradaServicio
             )
         {
             _mapper = mapper;
             _negocioServicio = negocioServicio;
-            _ventaServicio = ventaServicio; 
-
-
+            _ventaServicio = ventaServicio;
+            _entradaServicio = entradaServicio;
         }
 
         public IActionResult EnviarClave(string correo, string clave)
@@ -44,12 +45,21 @@ namespace SistemaVenta.AplicacionWeb.Controllers
 
             VMPDFVenta modelo = new VMPDFVenta();
 
-            modelo.negocio = vmNegocio; 
+            modelo.negocio = vmNegocio;
             modelo.venta = vmVenta;
-            
 
+            return View(modelo);
+        }
 
+        public async Task<IActionResult> PDFEntrada(string numeroEntrada)
+        {
+            VMEntrada vmEntrada = _mapper.Map<VMEntrada>(await _entradaServicio.Detalle(numeroEntrada));
+            VMNegocio vmNegocio = _mapper.Map<VMNegocio>(await _negocioServicio.Obtener());
 
+            VMPDFEntrada modelo = new VMPDFEntrada();
+
+            modelo.negocio = vmNegocio;
+            modelo.entrada = vmEntrada;
 
             return View(modelo);
         }
