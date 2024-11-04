@@ -10,7 +10,9 @@ namespace SistemaVenta.BLL.Interfaces
     public interface IProductoService
     {
 
-        Task<List<Producto>> Lista(); 
+        Task<List<Producto>> Lista();
+
+        Task<List<Producto>> ListaIsLowOnStock();
 
 
         Task<Producto> Crear(Producto entidad, Stream imagen = null, string NombreImagen = ""); 

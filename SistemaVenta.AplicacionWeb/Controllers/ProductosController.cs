@@ -13,17 +13,17 @@ namespace SistemaVenta.AplicacionWeb.Controllers
     public class ProductosController : Controller
     {
 
-        private readonly IMapper _mapper; 
+        private readonly IMapper _mapper;
         private readonly IProductoService _productoServicio;
 
 
-        public ProductosController(IMapper mapper, 
+        public ProductosController(IMapper mapper,
                          IProductoService productoServicio
                         )
         {
             _mapper = mapper;
             _productoServicio = productoServicio;
-            
+
 
         }
 
@@ -34,15 +34,25 @@ namespace SistemaVenta.AplicacionWeb.Controllers
         }
 
         [HttpGet]
-        public async  Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista()
         {
 
             List<VMProducto> vmProductoLista = _mapper.Map<List<VMProducto>>(await _productoServicio.Lista());
 
-            return StatusCode(StatusCodes.Status200OK, new { data = vmProductoLista }); 
+            return StatusCode(StatusCodes.Status200OK, new { data = vmProductoLista });
 
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ListaIsLowOnStock()
+        {
+
+            List<VMProducto> vmProductoLista = _mapper.Map<List<VMProducto>>(await _productoServicio.ListaIsLowOnStock());
+
+            return StatusCode(StatusCodes.Status200OK, new { data = vmProductoLista });
+
+        }
+        
         [HttpPost]
         public async Task<IActionResult> Crear([FromForm] IFormFile imagen, [FromForm] string modelo)
         {

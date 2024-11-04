@@ -38,7 +38,13 @@ namespace SistemaVenta.BLL.Implementacion
 
             IQueryable<Producto> query = await _repositorio.Consultar();
             return query.Include(c => c.IdCategoriaNavigation).ToList(); 
+        }
 
+        public async Task<List<Producto>> ListaIsLowOnStock()
+        {
+
+            IQueryable<Producto> query = await _repositorio.Consultar(entidad => entidad.Stock < 11);
+            return query.ToList();
         }
 
         public async Task<Producto> Crear(Producto entidad, Stream imagen = null, string NombreImagen = "")
