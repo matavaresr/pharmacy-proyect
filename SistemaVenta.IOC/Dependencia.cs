@@ -12,6 +12,7 @@ using SistemaVenta.DAL.Implementacion;
 using SistemaVenta.DAL.Interfaces;
 using SistemaVenta.BLL.Implementacion;
 using SistemaVenta.BLL.Interfaces;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace SistemaVenta.IOC
 {
@@ -22,7 +23,10 @@ namespace SistemaVenta.IOC
         
             services.AddDbContext<DbventaContext>(options =>
                 {
-                    options.UseSqlServer(Configuration.GetConnectionString("CadenaSQL")); 
+                    /*options.UseSqlServer(Configuration.GetConnectionString("CadenaSQL"));*/
+                    options.UseMySql(Configuration.GetConnectionString("CadenaSQL"),
+                        new MySqlServerVersion(new Version(8, 0, 21)) // Asegúrate de ajustar la versión según tu versión de MariaDB/MySQL
+                    );
                 });
 
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));

@@ -55,7 +55,7 @@ public partial class DbventaContext : DbContext
     {
         modelBuilder.Entity<Categoria>(entity =>
         {
-            entity.HasKey(e => e.IdCategoria).HasName("PK__Categori__8A3D240C0F43FCC9");
+            entity.HasKey(e => e.IdCategoria).HasName("PK__Categori__8A3D240C929E73C5");
 
             entity.Property(e => e.IdCategoria).HasColumnName("idCategoria");
             entity.Property(e => e.Descripcion)
@@ -124,7 +124,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<DetalleVenta>(entity =>
         {
-            entity.HasKey(e => e.IdDetalleVenta).HasName("PK__DetalleV__BFE2843F9EB31AA9");
+            entity.HasKey(e => e.IdDetalleVenta).HasName("PK__DetalleV__BFE2843F6BEB92C7");
 
             entity.Property(e => e.IdDetalleVenta).HasColumnName("idDetalleVenta");
             entity.Property(e => e.Cantidad).HasColumnName("cantidad");
@@ -151,7 +151,7 @@ public partial class DbventaContext : DbContext
 
             entity.HasOne(d => d.IdVentaNavigation).WithMany(p => p.DetalleVenta)
                 .HasForeignKey(d => d.IdVenta)
-                .HasConstraintName("FK__DetalleVe__idVen__693CA210");
+                .HasConstraintName("FK__DetalleVe__idVen__5812160E");
         });
 
         modelBuilder.Entity<Entrada>(entity =>
@@ -200,7 +200,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<Menu>(entity =>
         {
-            entity.HasKey(e => e.IdMenu).HasName("PK__Menu__C26AF483D099DF6F");
+            entity.HasKey(e => e.IdMenu).HasName("PK__Menu__C26AF4832115F70B");
 
             entity.ToTable("Menu");
 
@@ -230,12 +230,12 @@ public partial class DbventaContext : DbContext
 
             entity.HasOne(d => d.IdMenuPadreNavigation).WithMany(p => p.InverseIdMenuPadreNavigation)
                 .HasForeignKey(d => d.IdMenuPadre)
-                .HasConstraintName("FK__Menu__idMenuPadr__49C3F6B7");
+                .HasConstraintName("FK__Menu__idMenuPadr__59063A47");
         });
 
         modelBuilder.Entity<Negocio>(entity =>
         {
-            entity.HasKey(e => e.IdNegocio).HasName("PK__Negocio__70E1E107A67EAF56");
+            entity.HasKey(e => e.IdNegocio).HasName("PK__Negocio__70E1E107B929F5C6");
 
             entity.ToTable("Negocio");
 
@@ -281,7 +281,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<NumeroCorrelativo>(entity =>
         {
-            entity.HasKey(e => e.IdNumeroCorrelativo).HasName("PK__NumeroCo__25FB547E1BEA8247");
+            entity.HasKey(e => e.IdNumeroCorrelativo).HasName("PK__NumeroCo__25FB547EBB59E228");
 
             entity.ToTable("NumeroCorrelativo");
 
@@ -299,7 +299,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<Producto>(entity =>
         {
-            entity.HasKey(e => e.IdProducto).HasName("PK__Producto__07F4A132800AB1A0");
+            entity.HasKey(e => e.IdProducto).HasName("PK__Producto__07F4A1321404B853");
 
             entity.ToTable("Producto");
 
@@ -337,12 +337,12 @@ public partial class DbventaContext : DbContext
 
             entity.HasOne(d => d.IdCategoriaNavigation).WithMany(p => p.Productos)
                 .HasForeignKey(d => d.IdCategoria)
-                .HasConstraintName("FK__Producto__idCate__5BE2A6F2");
+                .HasConstraintName("FK__Producto__idCate__59FA5E80");
         });
 
         modelBuilder.Entity<Rol>(entity =>
         {
-            entity.HasKey(e => e.IdRol).HasName("PK__Rol__3C872F76AEDA3512");
+            entity.HasKey(e => e.IdRol).HasName("PK__Rol__3C872F7602E70E68");
 
             entity.ToTable("Rol");
 
@@ -360,7 +360,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<RolMenu>(entity =>
         {
-            entity.HasKey(e => e.IdRolMenu).HasName("PK__RolMenu__CD2045D85BE8C521");
+            entity.HasKey(e => e.IdRolMenu).HasName("PK__RolMenu__CD2045D81EBEAE06");
 
             entity.ToTable("RolMenu");
 
@@ -375,16 +375,16 @@ public partial class DbventaContext : DbContext
 
             entity.HasOne(d => d.IdMenuNavigation).WithMany(p => p.RolMenus)
                 .HasForeignKey(d => d.IdMenu)
-                .HasConstraintName("FK__RolMenu__idMenu__5165187F");
+                .HasConstraintName("FK__RolMenu__idMenu__5AEE82B9");
 
             entity.HasOne(d => d.IdRolNavigation).WithMany(p => p.RolMenus)
                 .HasForeignKey(d => d.IdRol)
-                .HasConstraintName("FK__RolMenu__idRol__5070F446");
+                .HasConstraintName("FK__RolMenu__idRol__5BE2A6F2");
         });
 
         modelBuilder.Entity<TipoDocumentoVenta>(entity =>
         {
-            entity.HasKey(e => e.IdTipoDocumentoVenta).HasName("PK__TipoDocu__A9D59AEEDB3A283D");
+            entity.HasKey(e => e.IdTipoDocumentoVenta).HasName("PK__TipoDocu__A9D59AEE22FCAC24");
 
             entity.Property(e => e.IdTipoDocumentoVenta).HasColumnName("idTipoDocumentoVenta");
             entity.Property(e => e.Descripcion)
@@ -400,7 +400,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__645723A6D00E1326");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__Usuario__645723A640B8C94C");
 
             entity.ToTable("Usuario");
 
@@ -443,7 +443,7 @@ public partial class DbventaContext : DbContext
 
         modelBuilder.Entity<Venta>(entity =>
         {
-            entity.HasKey(e => e.IdVenta).HasName("PK__Venta__077D56142368CB5D");
+            entity.HasKey(e => e.IdVenta).HasName("PK__Venta__077D5614B3BC8F59");
 
             entity.Property(e => e.IdVenta).HasColumnName("idVenta");
             entity.Property(e => e.DocumentoCliente)
@@ -474,11 +474,11 @@ public partial class DbventaContext : DbContext
 
             entity.HasOne(d => d.IdTipoDocumentoVentaNavigation).WithMany(p => p.Venta)
                 .HasForeignKey(d => d.IdTipoDocumentoVenta)
-                .HasConstraintName("FK__Venta__idTipoDoc__6477ECF3");
+                .HasConstraintName("FK__Venta__idTipoDoc__5DCAEF64");
 
             entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Venta)
                 .HasForeignKey(d => d.IdUsuario)
-                .HasConstraintName("FK__Venta__idUsuario__656C112C");
+                .HasConstraintName("FK__Venta__idUsuario__5EBF139D");
         });
 
         OnModelCreatingPartial(modelBuilder);
