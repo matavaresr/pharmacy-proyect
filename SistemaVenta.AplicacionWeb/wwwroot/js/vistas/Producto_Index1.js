@@ -52,7 +52,15 @@ $(document).ready(function () {
             { "data": "marca" },
             { "data": "descripcion" },
             { "data": "nombreCategoria" },
-            { "data": "stock" },
+            //{ "data": "stock" },
+            {
+                "data": "stock", render: function (data) {
+                    if (data < 11)
+                        return '<span style="color:red;">'+data+'</span>';
+                    else
+                        return '<span>'+data+'</span>';
+                }
+            },
             //{ "data": "precio" },
             {
                 "data": "esActivo", render: function (data) {

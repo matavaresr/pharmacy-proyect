@@ -19,7 +19,12 @@ $(document).ready(function () {
             { "data": "marca" },
             { "data": "descripcion" },
             { "data": "nombreCategoria", "visible": false, "searchable": false },
-            { "data": "stock" },
+            //{ "data": "stock" },
+            {
+                "data": "stock", render: function (data) {
+                    return '<span style="color:red;">' + data + '</span>';
+                }
+            },
             {
                 "data": "esActivo", render: function (data) {
                     if (data == 1)
