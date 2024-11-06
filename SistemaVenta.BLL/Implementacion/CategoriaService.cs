@@ -70,8 +70,9 @@ namespace SistemaVenta.BLL.Implementacion
                 if(categoria_encontrada == null)
                     throw new TaskCanceledException("La categoria no existe");
 
+                categoria_encontrada.EsActivo = false;
 
-                bool respuesta = await _repositorio.Eliminar(categoria_encontrada);
+                bool respuesta = await _repositorio.Editar(categoria_encontrada);
 
                 return respuesta; 
 

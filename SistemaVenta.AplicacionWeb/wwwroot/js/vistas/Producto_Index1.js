@@ -208,7 +208,7 @@ $("#btnGuardar").click(function () {
                     tablaData.row(filaSeleccionada).data(responseJson.objeto).draw(false);
                     filaSeleccionada = null;
                     $("#modalData").modal("hide")
-                    swal("Listo", "El prodcuto fue modificado", "success")
+                    swal("Listo", "El producto fue modificado", "success")
                 } else {
                     swal("Lo sentimos", responseJson.mensaje, "error")
                 }

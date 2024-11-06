@@ -82,6 +82,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
 
 
                 modelo.IdUsuario = int.Parse(idUsuario);
+                modelo.IdTipoDocumentoVenta = 2;
 
                 Venta venta_creada = await _ventaServicio.Registrar(_mapper.Map<Venta>(modelo));
                 modelo = _mapper.Map<VMVenta>(venta_creada);

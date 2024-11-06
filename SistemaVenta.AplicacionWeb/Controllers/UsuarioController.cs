@@ -69,7 +69,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
             GenericResponse<VMUsuario> gResponse = new GenericResponse<VMUsuario>(); 
 
 
-                try
+               try
               {
                 VMUsuario vmUsuario = JsonConvert.DeserializeObject<VMUsuario>(modelo);
 

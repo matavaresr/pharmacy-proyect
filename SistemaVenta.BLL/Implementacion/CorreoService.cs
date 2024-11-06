@@ -64,8 +64,7 @@ namespace SistemaVenta.BLL.Implementacion
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = false, 
                     EnableSsl = true
-                    
-
+                   
                 };
 
                 clienteServidor.Send(correo);

@@ -75,6 +75,7 @@ namespace SistemaVenta.AplicacionWeb.Controllers
                     imagenStream = imagen.OpenReadStream(); 
 
                 }
+
                 Producto producto_creado = await _productoServicio.Crear(_mapper.Map<Producto>(vmProducto), imagenStream, nombreImagen);
 
                 vmProducto = _mapper.Map<VMProducto>(producto_creado);

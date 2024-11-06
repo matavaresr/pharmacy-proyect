@@ -36,14 +36,14 @@ namespace SistemaVenta.BLL.Implementacion
         public async Task<List<Producto>> Lista()
         {
 
-            IQueryable<Producto> query = await _repositorio.Consultar();
+            IQueryable<Producto> query = await _repositorio.Consultar(entidad => entidad.EsActivo == true);
             return query.Include(c => c.IdCategoriaNavigation).ToList(); 
         }
 
         public async Task<List<Producto>> ListaIsLowOnStock()
         {
 
-            IQueryable<Producto> query = await _repositorio.Consultar(entidad => entidad.Stock < 11);
+            IQueryable<Producto> query = await _repositorio.Consultar(entidad => entidad.Stock < 11 && entidad.EsActivo == true);
             return query.ToList();
         }
 
@@ -157,7 +157,9 @@ namespace SistemaVenta.BLL.Implementacion
 
                 string nombreImagen = producto_encontrado.NombreImagen;
 
-                bool respuesta = await _repositorio.Eliminar(producto_encontrado);
+                producto_encontrado.EsActivo = false;
+
+                bool respuesta = await _repositorio.Editar(producto_encontrado);
 
                 if (respuesta)
                     await _fireBaseServicio.EliminarStorage("carpeta_producto",nombreImagen);

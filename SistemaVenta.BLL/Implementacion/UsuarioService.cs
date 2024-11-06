@@ -192,7 +192,10 @@ namespace SistemaVenta.BLL.Implementacion
                     throw new TaskCanceledException("El usuario no existe");
 
                 string nombreFoto = usuario_encontrado.NombreFoto;
-                bool respuesta = await _repositorio.Eliminar(usuario_encontrado);
+
+                usuario_encontrado.EsActivo = false;
+
+                bool respuesta = await _repositorio.Editar(usuario_encontrado);
 
                 if (respuesta)
                     await _fireBaseService.EliminarStorage("carpeta_usuario", nombreFoto);
