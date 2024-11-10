@@ -16,36 +16,32 @@ namespace SistemaVenta.AplicacionWeb.Controllers
     public class AccesoController : Controller
     {
         private readonly IUsuarioService _usuarioServicio;
-
-        public AccesoController(IUsuarioService usuarioServicio)
+        private readonly INegocioService _negocioServicio;
+        
+        public AccesoController(IUsuarioService usuarioServicio, INegocioService negocioServicio)
         {
             _usuarioServicio = usuarioServicio;
+            _negocioServicio = negocioServicio;
         }
 
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
-
-
             ClaimsPrincipal claimUser = HttpContext.User;
             if (claimUser.Identity.IsAuthenticated) {
                 return RedirectToAction("Index", "Home");
 
             }
 
+            ViewData["UrlNegocio"] = await _negocioServicio.ObtenerUrl();
             return View(); 
         }
 
-        public IActionResult RestablecerClave()
+        public async Task<IActionResult> RestablecerClave()
         {
-
-
-            
+            ViewData["UrlNegocio"] = await _negocioServicio.ObtenerUrl();
 
             return View();
         }
-
-
-
 
         [HttpPost]
         public async Task<IActionResult> Login(VMUsuarioLogin modelo)

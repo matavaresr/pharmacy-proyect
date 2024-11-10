@@ -39,9 +39,22 @@ namespace SistemaVenta.BLL.Implementacion
             }
         }
 
+        public async Task<string> ObtenerUrl()
+        {
+            try
+            {
+                Negocio negocio_encontrado = await _repositorio.Obtener(n => n.IdNegocio == 1);
+                return negocio_encontrado.UrlLogo;
+            }
+            catch
+            {
+                throw;
+
+            }
+        }
 
 
-        public  async Task<Negocio> GuardarCambios(Negocio entidad, Stream Logo = null, string NombreLogo = "")
+        public async Task<Negocio> GuardarCambios(Negocio entidad, Stream Logo = null, string NombreLogo = "")
         {
             try
             {

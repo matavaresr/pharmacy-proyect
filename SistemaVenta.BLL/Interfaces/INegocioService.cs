@@ -15,6 +15,7 @@ namespace SistemaVenta.BLL.Interfaces
     {
         Task<Negocio> Obtener();
 
+        Task<string> ObtenerUrl();
 
         Task<Negocio> GuardarCambios(Negocio entidad, Stream Logo = null, string NombreLogo ="");
 

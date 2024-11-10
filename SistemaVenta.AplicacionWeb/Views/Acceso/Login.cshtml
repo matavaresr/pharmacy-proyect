@@ -1,10 +1,8 @@
 ﻿@model SistemaVenta.AplicacionWeb.Models.ViewModels.VMUsuarioLogin;
 @{
     Layout = null;
+    var urlLogoNegocio = User.FindFirst("UrlFoto")?.Value;
 }
-
-<!DOCTYPE html>
-<html lang="ES">
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MEDICALSISTEM</title>
+    <title>MEDICALSYSTEM</title>
 
     <!-- Custom fonts for this template-->
     <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,6 +21,11 @@
 
     <!-- Custom styles for this template-->
     <link href="~/css/Styles13.css" rel="stylesheet">
+    <style>
+        .bg-login-image{
+            background-image: url(@Html.Raw(ViewData["UrlNegocio"]));
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-info"s>
@@ -38,8 +41,7 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                            </div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -65,7 +67,7 @@
                                                 <label class="custom-control-label" for="chkMantenerSesion">Mantener Sesión</label>
                                             </div>
                                         </div>
-
+                                        
                                         @if (ViewData["Mensaje"] != null)
                                         {
                                             <div class="form-group">
@@ -79,22 +81,6 @@
                                             Ingresar
                                         </button>
                                     </form>
-
-                                    <script>
-                                        function togglePasswordVisibility() {
-                                            var passwordInput = document.getElementById("passwordInput");
-                                            var toggleIcon = document.getElementById("toggleIcon");
-                                            if (passwordInput.type === "password") {
-                                                passwordInput.type = "text";
-                                                toggleIcon.classList.remove("fa-eye");
-                                                toggleIcon.classList.add("fa-eye-slash");
-                                            } else {
-                                                passwordInput.type = "password";
-                                                toggleIcon.classList.remove("fa-eye-slash");
-                                                toggleIcon.classList.add("fa-eye");
-                                            }
-                                        }
-                                    </script>
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="@Url.Action("RestablecerClave","Acceso")">¿Olvidó su contraseña?</a>
@@ -104,14 +90,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </body>
-
-</html>
+<script src="~/vendor/jquery/jquery.min.js"></script>
+<script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="~/js/vistas/Login.js"></script>
     

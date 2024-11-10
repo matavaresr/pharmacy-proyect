@@ -614,10 +614,11 @@ pre {
 }
 
 .bg-login-image {
-    background-image: url(../img/loginimage2.png);
+    /*background-image: url(../img/loginimage2.png);*/
     background-size: cover;
-  s
+    display: none;
 }
+
 .col {
     flex-basis: 0;
     flex-grow: 1;

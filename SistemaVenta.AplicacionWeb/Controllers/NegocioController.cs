@@ -47,8 +47,6 @@ namespace SistemaVenta.AplicacionWeb.Controllers
                 gResponse.Estado = true;
                 gResponse.Objeto = vmNegocio;
 
-
-
             }
             catch (Exception ex) {
 
@@ -58,7 +56,6 @@ namespace SistemaVenta.AplicacionWeb.Controllers
             }
             return StatusCode(StatusCodes.Status200OK, gResponse);
         }
-
 
         [HttpPost]
 
