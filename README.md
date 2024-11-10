@@ -62,7 +62,7 @@ Esta guía detalla los pasos para instalar el entorno de desarrollo necesario pa
    - ![image](https://github.com/user-attachments/assets/eefd46b4-1126-409f-8e01-c1457356a1bc)
    - El archivo viene en el repositorio llamado DBVENTA.bak
 
-## Paso 4: Cambiar configuracion en appsettings.json
+## Paso 4: Agregar appsettings.json en apartado raiz
    - Cambiar el nombre de computadora por la suya, asi como en la base de datos, lo demas lo respetan
    - ![image](https://github.com/user-attachments/assets/1afb9b8f-aa19-424c-bbfd-8d166aefcf03)
 
